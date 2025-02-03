@@ -1,0 +1,18 @@
+@use 'mixins';
+@use 'variables';
+
+.young-serif-regular {
+    @include mixins.font-style(variables.$secondary-font, 400);
+  }
+  
+  .outfit-regular {
+    @include mixins.font-style(variables.$main-font, 400);
+  }
+  
+  .outfit-semibold {
+    @include mixins.font-style(variables.$main-font, 600);
+  }
+  
+  .outfit-bold {
+    @include mixins.font-style(variables.$main-font, 700);
+  }

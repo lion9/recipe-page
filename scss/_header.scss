@@ -1,0 +1,47 @@
+@use 'variables';
+
+.recipe-header {
+    background-color: white;
+    width: 100%;
+    max-width: 737px;
+    border-radius: 25px 25px 0 0;
+    padding: 41px 41px 0 41px;
+
+    @media screen and (max-width: 390px) {
+      border-radius: 0;
+      padding: 0;
+    }
+    &__image {
+        width: 100%;
+        max-width: 657px;
+        height: auto;
+        border-radius: 14px;
+        margin-bottom: 29px;
+
+        @media screen and (max-width: 390px) {
+          border-radius: 0;
+        }
+    }
+    &__heading {
+        font-size: 2.5rem;
+        color: variables.$stone-900;
+        font-family: variables.$secondary-font;
+
+        @media screen and (max-width: 390px) {
+          font-size: 36px;
+          padding: 7px 31px 10px 32px;
+          line-height: 36px;
+        }
+    }
+    &__description {
+        line-height: 1.5;
+        padding-top: 15px;
+        padding-bottom: 32px;
+        color: variables.$stone-600;
+
+        @media screen and (max-width: 390px) {
+          padding: 14px 31px 10px 32px;
+          padding-bottom: 32px;
+        }
+    }
+}

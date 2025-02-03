@@ -1,0 +1,37 @@
+@use 'reset';
+@use 'variables';
+@use 'mixins';
+@use 'typography';
+@use 'header';
+@use 'recipe-card';
+@use 'recipe-section';
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('woff2-variations');
+    src: url('/assets/fonts/outfit/Outfit-VariableFont_wght.ttf') format('woff2') tech('variations');
+    font-weight: 100 1000;
+    font-stretch: 25% 151%;
+}
+
+@font-face {
+    font-family: 'YoungSerif-Regular';
+    src: url('/assets/fonts/young-serif/YoungSerif-Regular.ttf') format('truetype');
+}
+
+body {
+  @include mixins.font-style(variables.$main-font, 400);
+  font-size: 16px;
+  background-color: variables.$stone-100;
+  padding: 122px 0 100px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 390px) {
+    padding-top: 0;
+  }
+}
+
+

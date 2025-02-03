@@ -1,0 +1,106 @@
+@use 'variables';
+
+.recipe-section {
+    &:not(:last-child) {
+        border-bottom: 1px solid variables.$stone-150;
+    }
+    &__title {
+        font-family: 'YoungSerif-Regular', serif;
+        font-size: 28px;
+        color: variables.$brown-800;
+        padding-top: 26px;
+
+        @media screen and (max-width: 390px) {
+            padding: 28px 31px 10px 0;
+        }
+    }
+    &__unordered-list {
+        list-style-position: outside;
+        padding-left: 24px;
+        padding-top: 14px;
+        padding-bottom: 27px;
+
+        @media screen and (max-width: 390px) {
+            padding: 8px 31px 22px 24px;
+        }
+    }
+    &__unordered-list-item {
+        padding-left: 16px;
+        line-height: 32px;
+
+        @media screen and (max-width: 390px) {
+            line-height: 25px;
+            margin-bottom: 7px;
+        }
+    }
+    &__ordered-list {
+        list-style-position: outside;
+        padding-left: 24px;
+        padding-top: 17px;
+        padding-bottom: 23px;
+        counter-reset: custom-counter;
+
+        @media screen and (max-width: 390px) {
+            padding-top: 8px;
+        }
+
+    }
+    &__ordered-list-item {
+        padding-left: 16px;
+        line-height: 26px;
+        margin-bottom: 5px;
+        counter-increment: name;
+        &::marker {
+            color: variables.$brown-800;
+            font-weight: 600;
+        }
+
+        @media screen and (max-width: 390px) {
+            line-height: 24px;
+            margin-bottom: 8px;
+        }
+    }
+    &__nutration-paragraph {
+        padding-top: 20px;
+        padding-bottom: 15px;
+
+        @media screen and (max-width: 390px) {
+            padding: 8px 1px 10px 1px;
+            line-height: 23px;
+        }
+    }
+    &__nutration-table {
+        width: 100%;
+               
+        @media screen and (max-width: 390px) {
+            margin-top: 1px;
+        }
+    }
+    &__nutration-table-header {
+        text-align: left;
+        padding-left: 32px;
+        padding-top: 2px;
+        font-weight: 400;
+        width: 50%;
+        height: 48px;
+        
+
+    }
+    &__nutration-table-cell {
+        text-align: left;
+        padding-left: 8px;
+        padding-top: 1px;
+        font-weight: 700;
+        color: variables.$brown-800;
+        width: 50%;
+
+    }
+    &__nutration-table-row:not(:last-child) {
+        border-bottom: 1px solid variables.$stone-150;
+    }
+}
+
+table, th, td {
+    border-collapse: collapse;
+    text-align: left;
+}
